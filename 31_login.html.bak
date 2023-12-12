@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <style>
+    h1 {
+      color: #aacc22;
+    }
+
+    label {
+      width: 130px;
+      color: #505050;
+      font-size: 1.2em
+    }
+
+    div {
+      width: 400px;
+      background: #ddee22;
+      border: thin #9390aa dashed;
+      padding: 3px
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1.3em
+    }
+
+    a:hover {
+      color: #ee0000
+    }
+  </style>
+</head>
+
+<body>
+  <h1>������ �α���ȭ��</h1>
+  <form action="31_adminmain.php" method="post">
+
+    <div>
+      <label>���̵�</label><input type="text" name="id"><br>
+      <label>��й�ȣ</label><input type="password" name="pwd">&nbsp;
+      <button>�α���</button></div>
+  </form>
+</body>
+
+</html>

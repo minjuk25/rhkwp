@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>BAB</title>
+  <link rel="stylesheet" href="./css/mystyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hahmlet&display=swap" rel="stylesheet">
+ <style>
+  h1{
+	text-align: center;
+	color: #73be6c;
+	}
+  fieldset{
+    width:300px;
+    border-color: #73be6c;
+    margin-left: auto;
+    margin-right: auto;
+          }
+  .login{
+    width:300px; height: 45px;
+	  margin:10px 20px;
+	  font-size:1.2em;
+  }
+
+
+  /*div {
+    width: 400px;
+    background: #ddee22;
+    border: thin #9390aa dashed;
+    padding: 3px
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.3em
+  }
+
+  a:hover {
+    color: #ee0000
+  }*/
+</style>
+</head>
+ <body>
+  <ul>
+    <li><a class="active" href="1_start.html">HOME</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">식당 리스트</a>
+      <div class="dropdown-content" >
+      <a href="6_listdis.php">가까운순</a>
+      <a href="6_listkind.php">종류순</a>
+      </div>
+    </li>
+    <li><a class="active" href="5_menu.html">식당 조회</a></li>
+    <li><a class="active" href="7_index.php">후기</a></li>
+    <li><a class="active" href="4_adminmain.php">관리자</a></li>
+  </ul>
+  <!--<div class="login">
+  <h1>로그인화면</h1>
+  <form action="2_authlogin.php" method="post">
+    <label>아이디</label><input type="text" name="id"><br>
+    <label>비밀번호</label><input type="password" name="pwd">&nbsp;
+    <button>로그인</button>
+    <br>
+    <a href="3_member.html">회원가입</a>  
+  </div>
+  </form>-->
+  <h1>회원</h1>
+  <fieldset style="text-align: center;">
+    <legend>로그인</legend>
+    <form action="2_authlogin.php" method="post">
+    <div class="login">아이디<input type="text" name="id"></div>
+    <div class="login">비밀번호<input type="password" name="pwd">&nbsp;</div>
+    <button>로그인</button>
+    <br>
+    <input type="button" value="회원가입" onclick="location.href='3_member.html'"></form>
+    <!--<a href="3_member.html">회원가입</a>-->
+  </fieldset>
+ </body>
+</html>

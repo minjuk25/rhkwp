@@ -1,0 +1,25 @@
+<style>
+table{width:500px}
+th{color:white;background:#ee9911}
+td{background:#aa55cc;color:white;font-size:1.2em}
+a{text-decoration:none}
+</style>
+<h2>woodpia 전체 회원 현황</h2>
+<table><tr>
+<th>아이디</th><th>비밀번호</th><th>가입일자</th><th>보기</th></tr>
+<?php
+$connect=mysql_connect("localhost","root","qwe123");
+mysql_select_db("sample",$connect);
+mysql_query('set names euckr');
+$sqlrec="select * from member order by regdate desc";
+$info=mysql_query($sqlrec,$connect);
+while($rowinfo=mysql_fetch_array($info))
+{
+	echo "<tr>";
+  echo "<td> $rowinfo[id] </td>";
+  echo "<td> $rowinfo[pwd] </td>";
+  echo "<td> $rowinfo[regdate] </td>";
+  echo "<td> <a href='31_detail.php?id=$rowinfo[id]'>상세보기 </a></td>";
+  echo "</tr>";
+}
+?>

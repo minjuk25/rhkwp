@@ -1,0 +1,32 @@
+<style>
+div{width:500px;border:1px dashed #9390aa;background:#aaee99}
+ul>li{list-style:none;font-size:1.2em}
+ul>li>a{text-decoration:none}
+ul>li>a:hover{color:#dd1122}
+</style>
+<?php
+$id=$_POST['id'];
+$pwd=$_POST['pwd'];
+$connect=mysqli_connect("localhost","root","");
+mysqli_select_db($connect,"sample");
+//mysqli_query('set names utf8');
+$sqlrec="select * from manager where id='$id' and pwd='$pwd'";
+$info=mysqli_query($connect,$sqlrec);
+if(!$info)
+{
+	echo "<script>alert('아이디 또는 비밀번호가 일치하지 않습니다.');history.back();</script>";
+	exit;
+}
+//$a=mysqli_result($info,0,0);
+$a=mysqli_fetch_array($info);
+?>
+<h1>친환경 가구 쇼핑몰 woodpia발전을 위해</h1>
+<?php echo $a?>님 반갑습니다.<br>
+<div>
+  <ul>
+  <li><a href="31_manager.php">회원관리</a></li>
+  <li><a href="#">상품입고관리</a></li>
+  <li><a href="#">상품재고관리</a></li>
+  <li><a href="#">거래처관리</a></li>
+  </ul>
+</div>
